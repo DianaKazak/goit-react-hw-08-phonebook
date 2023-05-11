@@ -12,7 +12,7 @@
   width: 150px;
   margin-left: 20px;
   border-radius: 4px;
-  border: solid 2px blue;
+  border: solid 2px rgb(224, 36, 117);
 
   &:hover,
   focus {
@@ -21,7 +21,7 @@
 }
 
 .button {
-  background-color: blue; 
+  background-color: rgb(224, 36, 117); 
   border: none;
   color: white;
   padding: 15px 32px;
@@ -40,7 +40,7 @@
 }
 
 .items {
-  background-color: blue;
+  background-color: rgb(224, 36, 117);
   border: none;
   color: white;
   font-size: 16px;
