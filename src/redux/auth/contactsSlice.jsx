@@ -23,43 +23,42 @@ const persistConfig = {
 const authSlice = createSlice({
   name: 'auth',
   initialState: authInitialState,
-  extraReducers: {
-    [register.pending]() {},
-    [register.fulfilled](state, { payload }) {
-      state.user.name = payload.user.name;
-      state.user.email = payload.user.email;
-      state.token = payload.token;
-      state.isLoggedIn = true;
-    },
-    [register.rejected]() {},
-
-    [logIn.pending]() {},
-    [logIn.fulfilled](state, { payload }) {
-      state.user.name = payload.user.name;
-      state.user.email = payload.user.email;
-      state.token = payload.token;
-      state.isLoggedIn = true;
-    },
-    [logIn.rejected]() {},
-
-    [logOut.pending]() {},
-    [logOut.fulfilled]() {
-      return authInitialState;
-    },
-    [logOut.rejected]() {},
-
-    [fetchCurrentUser.pending](state) {
-      state.isFetchingCurrentUser = true;
-    },
-    [fetchCurrentUser.fulfilled](state, { payload }) {
-      state.user.name = payload.name;
-      state.user.email = payload.email;
-      state.isLoggedIn = true;
-      state.isFetchingCurrentUser = false;
-    },
-    [fetchCurrentUser.rejected](state) {
-      state.isFetchingCurrentUser = false;
-    },
+  reducers: {},
+  extraReducers: builder => {
+    builder
+      .addCase(register.pending, () => {})
+      .addCase(register.fulfilled, (state, { payload }) => {
+        state.user.name = payload.user.name;
+        state.user.email = payload.user.email;
+        state.token = payload.token;
+        state.isLoggedIn = true;
+      })
+      .addCase(register.rejected, () => {})
+      .addCase(logIn.pending, () => {})
+      .addCase(logIn.fulfilled, (state, { payload }) => {
+        state.user.name = payload.user.name;
+        state.user.email = payload.user.email;
+        state.token = payload.token;
+        state.isLoggedIn = true;
+      })
+      .addCase(logIn.rejected, () => {})
+      .addCase(logOut.pending, () => {})
+      .addCase(logOut.fulfilled, () => {
+        return authInitialState;
+      })
+      .addCase(logOut.rejected, () => {})
+      .addCase(fetchCurrentUser.pending, (state) => {
+        state.isFetchingCurrentUser = true;
+      })
+      .addCase(fetchCurrentUser.fulfilled, (state, { payload }) => {
+        state.user.name = payload.name;
+        state.user.email = payload.email;
+        state.isLoggedIn = true;
+        state.isFetchingCurrentUser = false;
+      })
+      .addCase(fetchCurrentUser.rejected, (state) => {
+        state.isFetchingCurrentUser = false;
+      });
   },
 });
 

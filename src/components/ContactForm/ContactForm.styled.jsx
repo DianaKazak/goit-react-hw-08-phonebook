@@ -19,16 +19,16 @@ export const StyledFormInput = styled.input`
   width: 150px;
   margin-left: 20px;
   border-radius: 4px;
-  border: solid 2px #d44688;
+  border: solid 2px blue;
 
   &:hover,
   focus {
-    box-shadow: 0 0 5px green;
+    box-shadow: 0 0 5px yellow;
   }
 `;
 
 export const StyledFormBtm = styled.button`
-  background-color: #d44688; 
+  background-color:blue; 
   border: none;
   color: white;
   padding: 15px 32px;
@@ -42,12 +42,12 @@ export const StyledFormBtm = styled.button`
   cursor: pointer;
 
   &:hover {
-    box-shadow: 0 0 5px green;
+    box-shadow: 0 0 5px yellow;
   }
 `;
 
 export const StyledFormItems = styled.div`
-  background-color: #d44688; 
+  background-color: blue; \
   border: none;
   color: white;
   font-size: 16px;

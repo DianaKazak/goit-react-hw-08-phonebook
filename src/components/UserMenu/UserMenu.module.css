@@ -6,11 +6,11 @@
 
 .username {
   font-weight: 700;
-  color:  #d44688;
+  color:  blue;
 }
 
 .userNameBtn {
-  background-color: #d44688; 
+  background-color: blue; 
   border: none;
   color: white;
   padding: 15px 32px;
@@ -24,6 +24,6 @@
   cursor: pointer;
 
   &:hover {
-    box-shadow: 0 0 5px green;
+    box-shadow: 0 0 5px yellow;
   }
 }

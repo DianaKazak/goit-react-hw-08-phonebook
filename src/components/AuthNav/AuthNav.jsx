@@ -10,18 +10,16 @@ export const AuthNav = () => {
     <div>
       {isLoggedIn ? (
         <div>
-          <span role="img" aria-label="Greeting icon">
-            📞
-          </span>
+       <span role="img" aria-label="Greeting icon">📕</span>
         </div>
       ) : (
         <div>
           <NavLink className={css.link} to="/register">
-            <div className={css.items}>Register</div>
+            <div className={css.block}>Register</div>
           </NavLink>
 
           <NavLink className={css.link} to="/login">
-            <div className={css.items}>Log In</div>
+            <div className={css.block}>Log In</div>
           </NavLink>
         </div>
       )}

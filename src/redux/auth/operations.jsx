@@ -1,8 +1,7 @@
-import { createAsyncThunk } from '@reduxjs/toolkit';
-import axios from 'axios';
-import { toast } from 'react-toastify';
 import { BASE_URL, updateToast } from 'redux/servises/constants/constants';
-
+import { createAsyncThunk } from '@reduxjs/toolkit';
+import { toast } from 'react-toastify';
+import axios from 'axios';
 axios.defaults.baseURL = BASE_URL;
 
 const token = {
@@ -91,12 +90,11 @@ export const fetchCurrentUser = createAsyncThunk(
     const { auth } = thunkAPI.getState();
     const persistedToken = auth.token;
 
-    // check if JWT is persisted
     if (!persistedToken) {
       return thunkAPI.rejectWithValue();
     }
 
-    // set JWT and fetch a current user
+  
     token.set(persistedToken);
     try {
       const { data } = await axios.get('/users/current');

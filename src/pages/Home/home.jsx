@@ -6,6 +6,8 @@ const styles = {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
+    margin: `0 auto`,
+    maxWidth: 1200,
   },
   title: {
     fontWeight: 500,
@@ -18,9 +20,8 @@ export default function Home() {
   return (
     <div style={styles.container}>
       <h1 style={styles.title}>
-        Welcome to contacts manager!{' '}
-        <span role="img" aria-label="Greeting icon">
-          📞
+        Please log in or sign up to get started{' '}
+        <span role="img" aria-label="Greeting icon" color='blue'>
         </span>
       </h1>
     </div>

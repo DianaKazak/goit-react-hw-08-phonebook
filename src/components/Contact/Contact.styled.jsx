@@ -1,30 +1,11 @@
 import styled from 'styled-components';
+
 export const StyledContacts = styled.li`
-  padding-top: 5px;
-  width: 785px;
   display: flex;
+  align-items: center;
   justify-content: space-between;
   padding-top: 20px;
-  align-items: center;
-`;
-
-export const StyledButton = styled.button`
-  background-color: #d44688; 
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: flex;
-  font-size: 16px;
-  border-radius: 8px;
-  height: 15px;
-  align-items: center;
-  cursor: pointer;
-
-  &:hover {
-    box-shadow: 0 0 5px green;
-  }
+  width: 785px;
 `;
 
 export const StyledName = styled.span`
@@ -32,6 +13,25 @@ export const StyledName = styled.span`
 `;
 
 export const StyledNumber = styled.span`
+  color: blue;
   padding-left: 10px;
-  color: #756060;
+`;
+
+export const StyledButton = styled.button`
+  align-items: center;
+  background-color: blue;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  font-size: 16px;
+  height: 15px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+
+  &:hover {
+    box-shadow: 0 0 5px yellow;
+  }
 `;

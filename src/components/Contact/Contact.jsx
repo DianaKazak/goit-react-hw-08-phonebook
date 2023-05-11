@@ -6,12 +6,11 @@ import {
   StyledNumber,
 } from './Contact.styled';
 import { useDeleteContactMutation } from 'redux/servises/contactApi';
-// import { useDispatch } from 'react-redux';
-// import { deleteContact } from 'redux/operations';
+
 
 export const Contact = ({ name, number, id }) => {
   const [deleteContact] = useDeleteContactMutation();
-  // const distpach = useDispatch();
+
   return (
     <StyledContacts>
       <StyledName>{name}: </StyledName>

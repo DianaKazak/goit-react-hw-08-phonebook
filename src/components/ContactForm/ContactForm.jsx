@@ -1,3 +1,10 @@
+import { useState } from 'react';
+
+import {
+  useFetchContactsQuery,
+  useAddContactMutation,
+} from 'redux/servises/contactApi';
+
 import {
   StyledForm,
   StyledFormLabel,
@@ -5,13 +12,6 @@ import {
   StyledFormBtm,
   StyledFormItems,
 } from './ContactForm.styled';
-
-import { useState } from 'react';
-
-import {
-  useFetchContactsQuery,
-  useAddContactMutation,
-} from 'redux/servises/contactApi';
 
 export const ContactForm = () => {
   const [number, setNumber] = useState('');
